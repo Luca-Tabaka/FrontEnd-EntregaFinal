@@ -112,7 +112,7 @@ function CatalogoProductos() {
       <div className="d-flex flex-wrap justify-content-center w-80 mt-3" style={{ gap: '20px' }}>
         {productosDisponibles.map((producto) => (
           <div key={producto.id} className="card" style={{ width: '300px' }}>
-            <img src={producto.imagen || producto.pathImg} className="card-img-top" alt={producto.nombre} />
+            <img src={producto.imagen || producto.pathImg} className="card-img-top" style={{ width: '100%', height: '450px', objectFit: 'cover' }} alt={producto.nombre} />
             <div className="card-body">
               <h5 className="card-title">{producto.nombre}</h5>
               <p className="card-text">{producto.descripcion}</p>
