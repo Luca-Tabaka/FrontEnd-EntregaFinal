@@ -44,10 +44,10 @@ function GestionArticulos() {
   const guardarArticulo = (e) => {
     e.preventDefault();
 
-    if (!form.nombre || !form.precio || Number(form.precio) < 0) {
-      alert("Por favor complete correctamente los campos.");
-      return;
-    }
+    if (!form.nombre || form.precio === '' || isNaN(form.precio) || Number(form.precio) < 0) {
+    alert("Por favor complete correctamente los campos.");
+    return;
+}
 
     const metodo = form.id ? 'PUT' : 'POST';
     const url = form.id ? `${API_URL}/${form.id}` : API_URL;
@@ -187,7 +187,7 @@ function GestionArticulos() {
               <td>{art.id}</td>
               <td>{art.nombre}</td>
               <td>{art.descripcion || ''}</td>
-              <td>${art.precio.toFixed(2)}</td>
+              <td>${Number(art.precio || 0).toFixed(2)}</td>
               <td>{art.categoria || ''}</td>
               <td>
                 <img
