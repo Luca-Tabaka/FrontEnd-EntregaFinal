@@ -95,7 +95,7 @@ function GestionArticulos() {
 
   return (
     <div className={styles.container}>
-      <h2 style={{ backgroundColor: '#dcdcdc'}}>Gestión de Artículos</h2>
+       <h2 style={{ backgroundColor: 'rgb(21, 50, 73)', color: 'white', padding: '12px', borderRadius: '5px' }}>Gestión de Artículos</h2>
 
       <form onSubmit={guardarArticulo} className={styles.form}>
         <input type="hidden" name="id" value={form.id} />
