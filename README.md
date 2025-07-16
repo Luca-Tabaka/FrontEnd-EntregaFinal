@@ -6,7 +6,7 @@ Esta parte del proyecto fue realizada usando React.
 
 Instrucciones para correr la aplicación:
 
-Para poder usar el proyecto correctamente utilizar los siguientes comandos listados a continuacion:
+Para poder usar el proyecto correctamente utilizar los siguientes comandos:
 
 Para instalar las dependencias del proyecto
 ```bash
